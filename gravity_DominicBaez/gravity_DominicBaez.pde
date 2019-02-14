@@ -31,6 +31,6 @@ void draw() {
   if (ypos>350) {
     crater = true;
     fill(#674E3D);
-    ellipse(75, 370, 90, 30);
+    ellipse(75, 370, 90, 35);
   }
 }
