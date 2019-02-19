@@ -26,7 +26,11 @@ void draw() {
   xpos=xpos+(xspeed*xdirection);
   ypos=ypos+(yspeed*ydirection);
   image(img, xpos, ypos, img.width/3, img.height/3);
-    fill(#29B23F);
+  if (xpos<0) {
+    xpos = width;
+    ypos = 0;
+  }
+  fill(#29B23F);
   rect(0, 350, 700, 200);
   if (ypos>350) {
     crater = true;
