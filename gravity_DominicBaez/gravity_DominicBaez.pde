@@ -22,7 +22,7 @@ void setup() {
 void draw() {
   // gives color to the window as a light blue
   background(#1D8CDE);
-  // if the image does not meet the conditions met then the house will be drawn
+  // if there is no crater then a house will be drawn
   if (!crater) {
     fill(#BCC62C);
     rect(50, 300, 50, 50);
@@ -40,8 +40,10 @@ void draw() {
   if (xpos<0) {
     xpos = width;
     ypos = 0;
+    // redraws house everytime that the image passes 0 going left
+    crater = false;
   }
-  // creates a green square that serves as the ground in the program
+  // creates a green square that serves as the ground in the display
   fill(#29B23F);
   rect(0, 350, 700, 200);
   // if the image does meet the conditions set below, it will create a brown ellipse that serves as a crater
